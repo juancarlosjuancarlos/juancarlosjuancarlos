@@ -4,23 +4,12 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Home
+      PLANTAS MEDICINALES
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <ion-card class="welcome-card">
-      <ion-img src="/assets/shapes.svg"></ion-img>
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
+    <!--<ion-list lines="none">
       <ion-list-header>
         <ion-label>Resources</ion-label>
       </ion-list-header>
@@ -40,5 +29,53 @@
         <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
         <ion-label>Theme Your App</ion-label>
       </ion-item>
-    </ion-list>
+    </ion-list>-->
+    <ion-content color="success">
+      <ion-slides pager="true" [options]="{autoplay:true,zoom:true,loop:true}">
+            <ion-slide *ngFor="let slide of slides;">
+              <img src="assets/{{slide}}">>
+              </ion-slide>
+          </ion-slides>       
+  <!-- List of Text Items -->
+<ion-list >
+  <ion-item color="success" (click)='enviar_planta(planta)' *ngFor="let planta of plantas;">
+    <ion-label >{{planta.nombre}}</ion-label>
+  </ion-item>
+  <!--<ion-item>
+    <ion-label>COCA</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>ANIZ</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>EUCALIPTO</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>LAMPAZO</ion-label>
+  </ion-item>-->
+</ion-list>
+<ion-fab vertical="center" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="share"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button href="https://www.instagram.com/kazumihakuri/"><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="bottom">
+      <ion-fab-button href="https://www.facebook.com/profile.php?id=100001303396566"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="start">
+      <ion-fab-button href="https://www.youtube.com/channel/UCqWWhy0fMbpyCyCuytch9RA?view_as=subscriber"><ion-icon name="logo-google"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+    
+  </ion-fab>
+  <ion-item>
+  <ion-label>Comentarios</ion-label>
+  <ion-textarea [(ngModel)]="mensaje" rows="6" cols="20" placeholder="envienos algunas sugerencias para mejorar!!!..."></ion-textarea>
+</ion-item>
+  <ion-item>
+  <ion-textarea clearOnEdit="true"></ion-textarea>
+  <ion-button expand="block" (click)="enviar('hola2')">Enviar</ion-button>
+</ion-item>
+
 </ion-content>

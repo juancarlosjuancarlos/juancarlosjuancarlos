@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>PLANTAS TRADICIONALES</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="secondary">
+    <ion-card class="welcome-card">
+      <ion-img src="/assets/{{planta.imagen}}"></ion-img>
+      <ion-card-header>
+        <!--<ion-card-subtitle>QUIENES SOMOS</ion-card-subtitle>-->
+        <ion-card-title>{{planta.nombre}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{planta.descripcion}}</p>
+      </ion-card-content>
+    </ion-card>
+</ion-content>
+
+<!--<ion-content>
+	 List of Text Items 
+<ion-list>
+  <ion-item>
+    <ion-label>MANZANILLA</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>COCAX</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>ANIZ</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>EUCALIPTO</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>LAMPAZO</ion-label>
+  </ion-item>
+</ion-list>
+
+ List of Input Items 
+<ion-list>
+  <ion-item>
+    <ion-label>Input</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Toggle</ion-label>
+    <ion-toggle slot="end"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>Radio</ion-label>
+    <ion-radio slot="end"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>Checkbox</ion-label>
+    <ion-checkbox slot="start"></ion-checkbox>
+  </ion-item>
+</ion-list>
+
+<!-- List of Sliding Items 
+<ion-list>
+  <ion-item-sliding>
+    <ion-item>
+      <ion-label>Item</ion-label>
+    </ion-item>
+    <ion-item-options side="end">
+      <ion-item-option (click)="unread(item)">Unread</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+  <ion-item-sliding>
+    <ion-item>
+      <ion-label>Item</ion-label>
+    </ion-item>
+    <ion-item-options side="end">
+      <ion-item-option (click)="unread(item)">Unread</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+</ion-list>
+
+</ion-content>-->
